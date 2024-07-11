@@ -5,20 +5,20 @@ addEventListener("fetch", (event) => {
 
 const dockerHub = "https://registry-1.docker.io";
 
-// const routes = {
-//   // production
-//   "docker.mikuware.top": dockerHub,
-//   "quay.mikuware.top": "https://quay.io",
-//   "gcr.mikuware.top": "https://gcr.io",
-//   "k8s-gcr.mikuware.top": "https://k8s.gcr.io",
-//   "k8s.mikuware.top": "https://registry.k8s.io",
-//   "ghcr.mikuware.top": "https://ghcr.io",
-//   "cloudsmith.mikuware.top": "https://docker.cloudsmith.io",
-//   "ecr.mikuware.top": "https://public.ecr.aws",
+const routes = {
+  // production
+  "docker.mikuware.top": dockerHub,
+  "quay.mikuware.top": "https://quay.io",
+  "gcr.mikuware.top": "https://gcr.io",
+  "k8s-gcr.mikuware.top": "https://k8s.gcr.io",
+  "k8s.mikuware.top": "https://registry.k8s.io",
+  "ghcr.mikuware.top": "https://ghcr.io",
+  "cloudsmith.mikuware.top": "https://docker.cloudsmith.io",
+  "ecr.mikuware.top": "https://public.ecr.aws",
 
-//   // staging
-//   "docker-staging.mikuware.top": dockerHub,
-// };
+  // staging
+  "docker-staging.mikuware.top": dockerHub,
+};
 
 function routeByHosts(host) {
   if (host in routes) {
